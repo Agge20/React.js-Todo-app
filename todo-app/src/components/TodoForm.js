@@ -6,14 +6,6 @@ const TodoForm = () => {
   const { addTodo } = useContext(TodoContext);
   const { register, handleSubmit} = useForm();
 
-  //  const handleSubmit = (event) => {
-  //     const target = event.target;
-  //     const name = target.name;
-  //     setTodoData({ [name]: event.target.value })
-  //     todos.push(todoData);
-  //     event.preventDefault();
-  //  }
-
   const onSubmit = (data) => {
     console.log(data);
     addTodo(data);

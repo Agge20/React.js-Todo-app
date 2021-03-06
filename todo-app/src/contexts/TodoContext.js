@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect } from 'react';
+import React, { createContext, useState } from 'react';
 
 export const TodoContext = createContext();
 
@@ -16,6 +16,7 @@ export const TodoContextProvider = (props) => {
     setTodos(prevState => [data, ...prevState])
     console.log(todos)
   }
+
   const removeTodo = (todoToRemove) => {
     console.log("This is todoToRemove " + todoToRemove);
     const removeClickedTodo = todos.filter(todo => todo.todoTitle !== todoToRemove);
@@ -23,16 +24,12 @@ export const TodoContextProvider = (props) => {
     console.log(removeClickedTodo);
 
   }
-  useEffect(() => {
-    console.log("Todos")
-    console.log(todos)
-}, [todos]);
 
   const values = {
     addTodo,
     todos,
     setTodos,
-    removeTodo
+    removeTodo,
 
   }
   return (

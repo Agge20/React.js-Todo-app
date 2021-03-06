@@ -16,7 +16,7 @@
 .right_inner_wrapper {
   width: 50%;
 }
-.remove_todo {
+.todo_card_button {
   max-width: 25px imp !important;
   height: 80%;
   margin: auto;

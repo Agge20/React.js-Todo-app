@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { TodoContext } from '../contexts/TodoContext';
 import TodoCard from './TodoCard';
 
@@ -8,9 +8,9 @@ const TodoList = () => {
   return (
     <div>
       {
-        todos.map(todo => {
+        todos.map((todo, i) => {
           return(
-            <TodoCard todoTitle={todo.todoTitle} />
+            <TodoCard todoTitle={todo.todoTitle} todoDesc={todo.todoDesc} todoAuth={todo.todoAuth} todoDeadline={todo.todoDeadline} key={i}/>
           )
         })
       }

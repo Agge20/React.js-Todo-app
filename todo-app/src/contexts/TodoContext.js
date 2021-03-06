@@ -5,13 +5,24 @@ export const TodoContext = createContext();
 export const TodoContextProvider = (props) => {
 
   const [todos, setTodos] = useState([
-
+    {
+      todoTitle: "test",
+      todoDesc: "test",
+      todoAuth: "test",
+      todoDate: "date"
+    }
   ]);
   const addTodo = (data) => {
     setTodos(prevState => [data, ...prevState])
     console.log(todos)
   }
+  const removeTodo = (todoToRemove) => {
+    console.log("This is todoToRemove " + todoToRemove);
+    const removeClickedTodo = todos.filter(todo => todo.todoTitle !== todoToRemove);
+    setTodos(removeClickedTodo)
+    console.log(removeClickedTodo);
 
+  }
   useEffect(() => {
     console.log("Todos")
     console.log(todos)
@@ -20,7 +31,9 @@ export const TodoContextProvider = (props) => {
   const values = {
     addTodo,
     todos,
-    setTodos
+    setTodos,
+    removeTodo
+
   }
   return (
     <TodoContext.Provider value={values}>

@@ -6,14 +6,13 @@ const TodoForm = () => {
   const { addTodo } = useContext(TodoContext);
   const { register, handleSubmit} = useForm();
 
+
   const onSubmit = (data) => {
-    console.log(data);
-    addTodo(data);
+    console.log(data)
+    addTodo(data)
   }
 
   //Updates value of title, desc and auth everytime user types something in one of the input-fields
-
-
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>

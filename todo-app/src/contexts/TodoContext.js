@@ -1,16 +1,21 @@
-import React, { createContext, useState, /*  useEffect */} from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 
 export const TodoContext = createContext();
 
 export const TodoContextProvider = (props) => {
 
-  const [todos, setTodos] = useState([]);
-  const addTodo = (todo) => {
-    todos.push(todo)
-    console.log("This is the todos: ")
+  const [todos, setTodos] = useState([
+
+  ]);
+  const addTodo = (data) => {
+    setTodos(prevState => [data, ...prevState])
     console.log(todos)
   }
 
+  useEffect(() => {
+    console.log("Todos")
+    console.log(todos)
+}, [todos]);
 
   const values = {
     addTodo,

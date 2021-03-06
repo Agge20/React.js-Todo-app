@@ -17,7 +17,7 @@ const TodoCard = (props) => {
   }
 
   return (
-    <div className={`${Styles.todo_card} ${done ? "not_done" : "mark_as_done"}`}>
+    <div className={`${Styles.todo_card} ${done ? "mark_as_done" : ""}`}>
       <div className={Styles.left_inner_wrapper}>
         <h2>{props.todoTitle}</h2>
         <h5>{props.todoDeadline}</h5>

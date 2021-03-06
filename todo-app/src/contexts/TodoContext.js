@@ -1,21 +1,36 @@
-import React, { createContext, useState, /*  useEffect */} from 'react';
+import React, { createContext, useState } from 'react';
 
 export const TodoContext = createContext();
 
 export const TodoContextProvider = (props) => {
 
-  const [todos, setTodos] = useState([]);
-  const addTodo = (todo) => {
-    todos.push(todo)
-    console.log("This is the todos: ")
+  const [todos, setTodos] = useState([
+    {
+      todoTitle: "test",
+      todoDesc: "test",
+      todoAuth: "test",
+      todoDate: "date"
+    }
+  ]);
+  const addTodo = (data) => {
+    setTodos(prevState => [data, ...prevState])
     console.log(todos)
   }
 
+  const removeTodo = (todoToRemove) => {
+    console.log("This is todoToRemove " + todoToRemove);
+    const removeClickedTodo = todos.filter(todo => todo.todoTitle !== todoToRemove);
+    setTodos(removeClickedTodo)
+    console.log(removeClickedTodo);
+
+  }
 
   const values = {
     addTodo,
     todos,
-    setTodos
+    setTodos,
+    removeTodo,
+
   }
   return (
     <TodoContext.Provider value={values}>

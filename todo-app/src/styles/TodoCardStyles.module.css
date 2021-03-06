@@ -1,0 +1,42 @@
+.main_wrapper {
+  border: solid black 1px;
+  width: 100%;
+}
+.todo_card {
+  border: solid red 2px;
+  width: 350px;
+  display: flex;
+  margin-top: 1rem;
+}
+.left_inner_wrapper {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.right_inner_wrapper {
+  width: 50%;
+}
+.todo_card_button {
+  max-width: 25px imp !important;
+  height: 80%;
+  margin: auto;
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .todo_card {
+    width: 400px;
+    max-height: 6rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {  }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {  }
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  }
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {  }

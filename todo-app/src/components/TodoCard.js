@@ -23,11 +23,19 @@ const TodoCard = (props) => {
         <h5>{props.todoDeadline}</h5>
       </div>
       <div className={Styles.right_inner_wrapper}>
-        <p>{props.todoDesc}</p>
+        <p className={Styles.todo_description}>{props.todoDesc}</p>
         <h4>{props.todoAuth}</h4>
       </div>
-      <button className={Styles.todo_card_button} onClick={() => {removeTodo(props.todoTitle)}}>X</button>
-      <button className={Styles.todo_card_button} onClick={markAsDone}>Done</button>
+      <button className={Styles.todo_card_button} onClick={() => {removeTodo(props.todoTitle)}}>
+        <span style={{color: "#DB5461"}}>
+          <i className="fas fa-times-circle fa-3x"></i>
+        </span>
+      </button>
+      <button className={Styles.todo_card_button} onClick={markAsDone}>
+        <span style={{color: "#ACEB98"}}>
+          <i class="fas fa-check-circle fa-3x"></i>
+        </span>
+      </button>
     </div>
   );
 }

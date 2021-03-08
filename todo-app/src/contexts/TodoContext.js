@@ -6,10 +6,10 @@ export const TodoContextProvider = (props) => {
 
   const [todos, setTodos] = useState([
     {
-      todoTitle: "test",
-      todoDesc: "test",
-      todoAuth: "test",
-      todoDate: "date"
+      todoTitle: "Eat food",
+      todoDesc: "Gonna make some meatballs",
+      todoAuth: "August",
+      todoDeadline: "January 13"
     }
   ]);
   const addTodo = (data) => {

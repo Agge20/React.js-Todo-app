@@ -26,10 +26,10 @@ const TodoForm = () => {
   return (
     <div className={Styles.todo_form_wrapper}>
       <form onSubmit={handleSubmit(onSubmit)} className={Styles.todo_form}>
-        <input type="text" placeholder="Enter a title for your task" name="todoTitle" ref={register} maxlength="15"/>
-        <input type="text" placeholder="Describe your task" name="todoDesc" ref={register} maxlength="15"/>
-        <input type="text" placeholder="Who is the author?" name="todoAuth" ref={register} maxlength="10"/>
-        <input type="text" placeholder="When is the deadline?" name="todoDeadline" ref={register} maxlength="12" />
+        <input type="text" placeholder="Enter a title for your task" name="todoTitle" ref={register} maxLength="15"/>
+        <input type="text" placeholder="Describe your task" name="todoDesc" ref={register} maxLength="20"/>
+        <input type="text" placeholder="Who is the author?" name="todoAuth" ref={register} maxLength="10"/>
+        <input type="text" placeholder="When is the deadline?" name="todoDeadline" ref={register} maxLength="12" />
         <button type="submit" className={Styles.add_todo_button}>Add Task</button>
       </form>
     </div>

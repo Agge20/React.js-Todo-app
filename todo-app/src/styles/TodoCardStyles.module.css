@@ -1,0 +1,64 @@
+.main_wrapper {
+  border: solid black 1px;
+  width: 100%;
+}
+.todo_card {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: solid black 3px;
+  border-radius: 2rem;
+  background-color: rgb(247, 247, 247);
+  width: 350px;
+  display: flex;
+  margin-top: 1rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  font-family: 'Montserrat', sans-serif !important;
+
+}
+.left_inner_wrapper {
+  width: 50%;
+  display: flex;
+  justify-items: center;
+  justify-items: center;
+  flex-direction: column;
+  padding-top: 0.4rem;
+}
+.right_inner_wrapper {
+  width: 50%;
+}
+.todo_card_button {
+  max-width: 25px imp !important;
+  height: 80%;
+  margin: auto;
+  background-color: transparent;
+  outline: none;
+  all: unset;
+  margin: 0.2rem;
+
+}
+.todo_description {
+  font-size: 0.8rem;
+}
+.todo_card_button:hover {
+  cursor: pointer;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .todo_card {
+    width: 400px;
+    max-height: 6rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {  }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {  }
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  }
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {  }

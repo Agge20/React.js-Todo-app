@@ -1,0 +1,76 @@
+.todo_form_wrapper {
+  height: 300px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(247, 247, 247);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 0.8rem;
+
+}
+
+.todo_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+
+}
+.add_todo_button {
+  width: 120px;
+  background-color: #e97e70;
+  border-radius: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  border: none;
+  padding: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.1rem;
+
+}
+.todo_form input {
+  border: solid transparent 1px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+  border-radius: 0.8rem;
+  padding-left: 0.3rem;
+  width: 200px;
+
+}
+.todo_form input:focus {
+  outline: none;
+
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .todo_form_wrapper {
+    width: 500px;
+
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .todo_form_wrapper {
+    width: 700px;
+  }
+  .todo_form {
+    max-width: 50%;
+  }
+  .todo_form input {
+    min-width: 300px;
+
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+ }
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  }
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {  }
